@@ -1,0 +1,28 @@
+<div class="container">
+    <h1>{{"{ Post Functionality }"}}</h1>
+    <div class="title-container">
+        <label>Title</label>
+        <input type="text"/>
+    </div>
+    <div class="NgxEditor__Wrapper editor">
+        <ngx-editor-menu [editor]="editor"> </ngx-editor-menu>
+        <ngx-editor
+        [editor]="editor"
+        [ngModel]="html"
+        [disabled]="false"
+        [placeholder]="'Type here...'"
+        ></ngx-editor>
+    </div>
+    <div class="select-type">
+        <label>Need help for?</label>
+        <mat-radio-group aria-label="Select an option">
+            <mat-radio-button value="feature">Feature</mat-radio-button>
+            <mat-radio-button value="error">Error</mat-radio-button>
+            <mat-radio-button value="bestPractice">Best Practice</mat-radio-button>
+            <mat-radio-button value="other">Other</mat-radio-button>
+        </mat-radio-group> 
+    </div>
+    <div class="chips-container"><app-chips></app-chips></div>
+    <button mat-raised-button color="primary">Find Help</button>
+</div>
+  

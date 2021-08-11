@@ -1,0 +1,26 @@
+<mat-form-field class="example-chip-list" appearance="fill">
+    <mat-label>Technology tags</mat-label>
+    <mat-chip-list #chipList aria-label="Fruit selection">
+      <mat-chip
+        *ngFor="let tech of techs"
+        [selectable]="selectable"
+        [removable]="removable"
+        (removed)="remove(tech)">
+        {{tech}}
+        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+      </mat-chip>
+      <input
+        placeholder="New tech..."
+        #techInput
+        [formControl]="techCtrl"
+        [matAutocomplete]="auto"
+        [matChipInputFor]="chipList"
+        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+        (matChipInputTokenEnd)="add($event)">
+    </mat-chip-list>
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+      <mat-option *ngFor="let tech of filteredTechs | async" [value]="tech">
+        {{tech}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
