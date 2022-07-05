@@ -1,0 +1,19 @@
+.css-wqayaq {
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.css-wgp850 {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+}
+
+#on-this-page {
+    flex-basis: 20%;
+    position: sticky;
+    top: 0;
+    height: 98vh;
+    // background-color: #FCF7FF;
+}

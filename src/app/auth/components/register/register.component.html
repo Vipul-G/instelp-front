@@ -1,0 +1,66 @@
+<div class="container">
+<form [formGroup]="registerForm" (submit)="handleSubmit()">
+    <div class="row">
+        <div>
+            <mat-form-field appearance="legacy">
+            <mat-label>Full Name</mat-label>
+            <input matInput formControlName="fullName">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="legacy">
+                <mat-label>Phone Number</mat-label>
+                <input matInput formControlName="phoneNumber">
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="row">
+        <div>
+            <mat-form-field appearance="legacy">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="legacy">
+                <mat-label>Role</mat-label>
+                <input matInput readonly value="questioner">
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="row">
+        <div>
+            <mat-form-field appearance="legacy">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName="password">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="legacy">
+                <mat-label>Re-enter password</mat-label>
+                <input matInput type="password">
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="row">
+        <button type="submit">Register</button>
+    </div>
+</form>
+<!-- <mat-form-field appearance="fill">
+    <mat-label>Horizontal position</mat-label>
+    <mat-select [(value)]="horizontalPosition">
+      <mat-option value="start">Start</mat-option>
+      <mat-option value="center">Center</mat-option>
+      <mat-option value="end">End</mat-option>
+      <mat-option value="left">Left</mat-option>
+      <mat-option value="right">Right</mat-option>
+    </mat-select>
+  </mat-form-field> -->
+  <!-- <mat-form-field appearance="fill">
+    <mat-label>Vertical position</mat-label>
+    <mat-select [(value)]="verticalPosition">
+      <mat-option value="top">Top</mat-option>
+      <mat-option value="bottom">Bottom</mat-option>
+    </mat-select>
+  </mat-form-field> -->
+</div>

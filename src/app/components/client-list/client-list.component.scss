@@ -1,0 +1,8 @@
+
+.container {
+    display: grid;
+    // border: 1px solid red;
+    height: 100%;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 30% 30% 30%;
+}

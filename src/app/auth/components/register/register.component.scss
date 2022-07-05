@@ -1,0 +1,14 @@
+.container {
+    border: 1px solid black;
+    padding: 10px;
+    display: block;
+    width: 40%;
+    margin: auto;
+}
+.row {
+    display: flex;
+}
+
+.row > div {
+    width: 50%;
+}

@@ -1,0 +1,318 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+}
+#api-console {
+    /* display: inline-block; */
+    position: sticky;
+    top: 0;
+    height: 98vh;
+    // background-color: #152748;
+    // color: white
+}
+@media screen and (min-width: 900px) {
+    .docs-layout-column {
+        height: calc(100vh - 3rem);
+        overflow-y: auto;
+    }
+}
+.docs-coderail {
+    color: white;
+    background-color: #233659;
+    padding-bottom: 10rem;
+    border-radius: 0;
+}
+
+.docs-layout-column {
+    flex: 1;
+    overflow-x: hidden;
+}
+
+.twlo-code {
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+    border-radius: 4px;
+    overflow: auto;
+}
+
+/*HEADER*/
+a, input {
+    font-family: "Whitney SSm A","Whitney SSm B","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-size: inherit;
+    font-style: normal;
+    font-weight: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.twlo-code-header {
+    background-color: #152748;
+    box-shadow: inset 0 -2px 0 -1px rgba(148,151,155,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    color: white;
+}
+.twlo-code-header__title {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 5rem;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.55;
+    line-height: 1.2;
+}
+.twlo-code-header__title a {
+    display: flex;
+}
+.twlo-code-header__title .twlo-icon-interface-dropdown {
+    margin: 0 1rem;
+    color: rgba(148,151,155,0.75);
+}
+svg {
+    max-height: 100%;
+}
+.twlo-code-header__dropdown {
+    display: none;
+    padding: 0.5rem 0;
+}
+.twlo-code-header__actions {
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: inset 0 2px 0 -1px rgba(148,151,155,0.2);
+    overflow-x: auto;
+    user-select: none;
+}
+.twlo-code__sample, .twlo-code__output {
+    position: relative;
+    background: #233659;
+    overflow-x: auto;
+    text-align: left;
+    z-index: 1;
+}
+.docs-coderail .twlo-code__actions {
+    margin-top: 0.3rem;
+}
+.twlo-code__actions {
+    position: sticky;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-bottom: -1rem;
+    z-index: 2;
+}
+
+.twlo-code-header__language.active {
+    opacity: 1;
+    box-shadow: inset 0px -2px 0 #008cff;
+    cursor: default;
+}
+.twlo-code-header__language {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.625rem;
+    font-weight: 500;
+    line-height: 1;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    margin-right: 1.5rem;
+    cursor: default;
+    transition: box-shadow 150ms;
+}
+.twlo-code-header__actions li {
+    cursor: pointer;
+}
+.twlo-code-header__versions {
+    display: flex;
+    list-style: none;
+}
+
+.twlo-code-header__languages {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    padding-left: 1.5rem;
+}
+
+.twlo-code-header__version.active {
+    opacity: 1;
+    cursor: default;
+}
+
+.twlo-code-header__version {
+    margin-right: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.625rem;
+    font-weight: 500;
+    line-height: 1;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+/* REQUEST CODE */
+.prism-token.prism-comment, .prism-token.prism-prolog, .prism-token.prism-doctype, .prism-token.prism-cdata {
+    color: #8292a2;
+}
+code {
+    font-family: monospace;
+}
+pre[class*="language-"].line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+}
+.twlo-code__sample>pre[class*="language-"], .twlo-code__output>pre[class*="language-"], div[class*="twlo-product"]>pre[class*="language-"] {
+    background: #233659;
+}
+.docs-coderail .twlo-code__snippet {
+    margin-top: 2rem;
+}
+:not(pre)>code[class*="language-"], pre[class*="language-"] {
+    background: #0d122b;
+}
+pre[class*="language-"] {
+    padding: 1em;
+    margin: 0.5em 0;
+    overflow: auto;
+    border-radius: 0.3em;
+}
+code[class*="language-"], pre[class*="language-"] {
+    color: #f8f8f2;
+    background: none;
+    font-family: "Lekton", Consolas, Monaco, monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+@media screen and (min-width: 1200px) {
+    .twlo-code__actions {
+        margin-bottom: -2.5rem;
+    }
+}
+
+.twlo-code__snippet {
+    padding: 1.5rem;
+    min-width: max-content;
+    background-color: transparent;
+    transition-property: opacity, visibility;
+    transition-duration: 200ms;
+}
+pre, code {
+    font-family: "Fira Mono",monospace;
+    white-space: pre;
+    tab-size: 2;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+pre {
+    display: block;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1em 0px;
+}
+pre[class*="language-"].line-numbers > code {
+    position: relative;
+    white-space: inherit;
+}
+pre code[class*="language-"] {
+    margin: 0;
+}
+code[class*="language-"], pre[class*="language-"] {
+    color: #f8f8f2;
+    background: none;
+    font-family: "Lekton", Consolas, Monaco, monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+.twlo-code__snippet pre, .twlo-code__snippet code {
+    overflow: visible;
+    display: initial;
+    padding: 0;
+}
+
+.line-numbers .line-numbers-rows {
+    // position: absolute;
+    // pointer-events: none;
+    // top: 0;
+    // font-size: 100%;
+    // left: -3.8em;
+    // width: 3em;
+    // letter-spacing: -1px;
+    // border-right: 1px solid #999;
+    // -webkit-user-select: none;
+    // -moz-user-select: none;
+    // -ms-user-select: none;
+    // user-select: none;
+}
+// .line-numbers-rows > span {
+//     display: block;
+//     counter-increment: linenumber;
+// }
+// .line-numbers-rows > span:before {
+//     content: counter(linenumber);
+//     color: #999;
+//     display: block;
+//     padding-right: 0.8em;
+//     text-align: right;
+// }
+
+.code-container {
+    display: flex;
+    // justify-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    counter-reset: linenumber;
+}
+// .code-container > .serial-number {
+
+// }
+.code-container > .serial-number > span::before {
+    counter-increment: linenumber;
+    content: counter(linenumber);
+}
